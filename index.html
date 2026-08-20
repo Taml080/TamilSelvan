@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamil Selvan I — Digital Marketing Executive</title>
+<link rel="icon" href="TS Logo-Photoroom.png" type="image/png">
+<link rel="shortcut icon" href="TS Logo-Photoroom.png" type="image/png">
+<meta name="description" content="Tamil Selvan I — Digital Marketing Executive specializing in SEO, Meta Ads, Social Media Marketing & AI Creative Strategy">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg2: #f8f7ff;
+    --text: #0a0a0f;
+    --text-muted: #6b6b80;
+    --accent: #7C3AED;
+    --accent-light: #a78bfa;
+    --accent-soft: #ede9fe;
+    --accent-glow: rgba(124,58,237,0.18);
+    --border: #e8e4f0;
+    --shadow: 0 4px 32px rgba(124,58,237,0.08);
+    --shadow-hover: 0 16px 48px rgba(124,58,237,0.18);
+    --radius: 18px;
+    --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  [data-theme="dark"] {
+    --bg: #0d0b14;
+    --bg2: #13101f;
+    --text: #f0eeff;
+    --text-muted: #9990b8;
+    --accent: #a78bfa;
+    --accent-light: #c4b5fd;
+    --accent-soft: #1e1736;
+    --accent-glow: rgba(167,139,250,0.15);
+    --border: #201c34;
+    --shadow: 0 4px 32px rgba(0,0,0,0.4);
+    --shadow-hover: 0 16px 48px rgba(167,139,250,0.2);
+  }
+  [data-theme="dark"] #cursor { background: #ffffff; mix-blend-mode: screen; }
+  [data-theme="dark"] #cursor-ring { border-color: #ffffff; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: auto; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background 0.4s, color 0.4s;
+  }
+
+  /* ── CUSTOM CURSOR ── */
+  #cursor { position: fixed; left: 0; top: 0; width: 14px; height: 14px; background: var(--accent); border-radius: 50%; pointer-events: none; z-index: 9999; opacity: 0; transform: translate(-50%,-50%); transition: opacity 0.2s, background 0.3s, width 0.3s, height 0.3s; mix-blend-mode: multiply; }
+  #cursor-ring { position: fixed; left: 0; top: 0; width: 40px; height: 40px; border: 1.5px solid var(--accent); border-radius: 50%; pointer-events: none; z-index: 9998; opacity: 0; transform: translate(-50%,-50%); transition: opacity 0.2s, width 0.3s, height 0.3s, border-color 0.3s; }
+  body.cursor-ready #cursor { opacity: 1; }
+  body.cursor-ready #cursor-ring { opacity: 0.6; }
+  @media (pointer: fine) {
+    body, body * { cursor: none !important; }
+  }
+  @media (pointer: coarse) {
+    #cursor, #cursor-ring { display: none; }
+  }
+
+  /* ── SCROLL PROGRESS ── */
+  #progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); z-index: 9997; transition: width 0.1s; border-radius: 0 4px 4px 0; }
+
+  /* ── LOADER ── */
+  #loader { position: fixed; inset: 0; background: var(--bg); z-index: 9990; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; transition: opacity 0.6s, visibility 0.6s; }
+  #loader.hide { opacity: 0; visibility: hidden; }
+  .loader-name { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: clamp(2rem,6vw,4rem); color: var(--text); letter-spacing: -2px; }
+  .loader-name span { color: var(--accent); }
+  .loader-bar { width: 200px; height: 2px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .loader-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; animation: loaderFill 1.8s ease forwards; }
+  @keyframes loaderFill { from { width: 0 } to { width: 100% } }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 0 clamp(1.5rem,4vw,4rem);
+    height: 70px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition);
+  }
+  [data-theme="dark"] nav { background: rgba(13,11,20,0.85); }
+  nav.scrolled { box-shadow: var(--shadow); }
+  .nav-logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.3rem; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; }
+  .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 8px; transition: var(--transition); letter-spacing: 0.2px; }
+  .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--accent-soft); }
+  .nav-right { display: flex; align-items: center; gap: 12px; }
+  .theme-btn { width: 38px; height: 38px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--bg); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: var(--transition); color: var(--text); }
+  .theme-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
+  .theme-btn svg, .social-icon svg, .btn svg, .form-submit svg, .service-arrow svg, #back-top svg, .float-social svg { width: 17px; height: 17px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  svg.brand-icon { fill: currentColor !important; stroke: none !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; width: 28px; padding: 4px 0; }
+  .hamburger span { display: block; height: 2px; background: var(--text); border-radius: 2px; transition: var(--transition); }
+  .nav-mobile { display: none; position: fixed; top: 70px; left: 0; right: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 1rem 2rem 1.5rem; z-index: 999; flex-direction: column; gap: 0.25rem; box-shadow: var(--shadow); }
+  .nav-mobile.open { display: flex; }
+  .nav-mobile a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); padding: 0.6rem 1rem; border-radius: 10px; text-decoration: none; transition: var(--transition); }
+  .nav-mobile a:hover { color: var(--accent); background: var(--accent-soft); }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    padding: 100px clamp(1.5rem,6vw,7rem) 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-design { position: absolute; opacity: 0.50; pointer-events: none; }
+  .design-meta { width: 280px; height: 280px; top: 5%; left: 8%; animation: float 12s ease-in-out infinite; }
+  .design-google { width: 320px; height: 200px; top: 50%; right: 5%; animation: float 14s ease-in-out infinite -3s; }
+  .design-chart { width: 240px; height: 240px; bottom: 8%; left: 12%; animation: float 10s ease-in-out infinite -2s; }
+  .design-graph { width: 200px; height: 180px; top: 30%; right: 15%; animation: float 11s ease-in-out infinite -4s; }
+  .hero-orb { position: absolute; border-radius: 50%; filter: blur(80px); animation: float 8s ease-in-out infinite; }
+  .orb1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(124,58,237,0.12), transparent 70%); right: -100px; top: -100px; }
+  .orb2 { width: 350px; height: 350px; background: radial-gradient(circle, rgba(167,139,250,0.1), transparent 70%); left: -80px; bottom: 0; animation-delay: -4s; }
+  @keyframes float { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-30px) scale(1.05)} }
+  .hero-content { z-index: 1; max-width: 560px; display: flex; flex-direction: column; align-items: flex-start; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-soft); color: var(--accent); border: 1px solid rgba(124,58,237,0.2); border-radius: 100px; padding: 6px 16px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1.5rem; }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
+  .hero-badge svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 var(--accent-glow)} 50%{box-shadow:0 0 0 6px transparent} }
+  .hero-title { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: clamp(2.6rem,5vw,4.2rem); line-height: 1.05; letter-spacing: -1.5px; color: var(--text); margin-bottom: 1.2rem; }
+  .hero-title .name-accent { color: var(--accent); white-space: nowrap; }
+  .hero-roles { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+  .role-tag { background: var(--bg2); border: 1px solid var(--border); color: var(--text-muted); border-radius: 8px; padding: 4px 12px; font-size: 0.8rem; font-weight: 500; }
+  .hero-desc { color: var(--text-muted); font-size: 1.05rem; line-height: 1.75; margin-bottom: 2rem; max-width: 500px; }
+  .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 2rem; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px; border-radius: 12px; font-size: 0.88rem; font-weight: 600; cursor: pointer; transition: var(--transition); text-decoration: none; border: none; font-family: inherit; }
+  .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 4px 20px var(--accent-glow); }
+  .btn-primary:hover { background: #6d28d9; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(124,58,237,0.35); }
+  .btn-outline { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); transform: translateY(-2px); }
+  .hero-socials { display: flex; gap: 10px; }
+  .social-icon { width: 40px; height: 40px; border-radius: 12px; border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); text-decoration: none; font-size: 1rem; transition: var(--transition); }
+  .social-icon:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); transform: translateY(-2px); }
+  .social-icon[href*="instagram"]:hover { border-color: #E4405F; color: #fff; background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+  .social-icon[href*="mailto"]:hover { border-color: #D44638; color: #fff; background: linear-gradient(135deg, #d44638, #ea4335); }
+  .social-icon[href*="tel"]:hover { border-color: #25D366; color: #fff; background: linear-gradient(135deg, #25D366, #128C7E); }
+  .linkedin-card:hover { background: #0a66c2; border-color: #0a66c2; color: #fff; }
+  .hero-image { z-index: 1; display: flex; justify-content: center; align-items: center; position: relative; }
+  .photo-frame { position: relative; width: 360px; height: 420px; }
+  .photo-bg { position: absolute; inset: 0; background: linear-gradient(145deg, rgba(124,58,237,0.9), rgba(109,40,217,0.55)); border-radius: 32px; transform: rotate(4deg); transition: var(--transition); }
+  .photo-frame:hover .photo-bg { transform: rotate(6deg) scale(1.03); }
+  .photo-inner { position: absolute; inset: 0; border-radius: 28px; overflow: hidden; border: 3px solid var(--bg); box-shadow: var(--shadow-hover); }
+  .photo-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-placeholder { width: 100%; height: 100%; background: linear-gradient(160deg, var(--accent-soft) 0%, #ddd6fe 50%, var(--bg2) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; }
+  .photo-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-light)); display: flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 2.5rem; color: #fff; letter-spacing: -1px; }
+  .photo-name-badge { background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); border-radius: 12px; padding: 8px 16px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.9rem; color: var(--text); }
+  .photo-float-badge { position: absolute; background: var(--bg); border: 1.5px solid var(--border); border-radius: 14px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow); font-size: 0.8rem; font-weight: 600; color: var(--text); animation: badgefloat 4s ease-in-out infinite; }
+  .badge-exp { bottom: -16px; left: -40px; }
+  .badge-proj { top: -16px; right: -30px; animation-delay: -2s; }
+  @keyframes badgefloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  .badge-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; }
+  .badge-icon svg { width: 16px; height: 16px; stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .tl-dot svg { width: 22px; height: 22px; stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: var(--transition); }
+  .tl-item:hover .tl-dot svg { stroke: #fff; }
+  .contact-item-icon svg { width: 20px; height: 20px; stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .acard-icon { width: 32px; height: 32px; border-radius: 8px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+  .acard-icon svg { width: 16px; height: 16px; stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .acard-secondary .acard-icon { background: rgba(255,255,255,0.2); }
+  .acard-secondary .acard-icon svg { stroke: #fff; }
+  .about-tag svg { width: 13px; height: 13px; stroke: var(--accent); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  .project-thumb-icon { width: 64px; height: 64px; border-radius: 16px; background: rgba(255,255,255,0.6); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; }
+  .project-thumb-icon svg { width: 30px; height: 30px; stroke: var(--accent); stroke-width: 1.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ── SECTION BASE ── */
+  section { padding: clamp(3rem,6vw,5rem) clamp(1.5rem,6vw,7rem); }
+  .section-label { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); background: var(--accent-soft); padding: 5px 14px; border-radius: 100px; margin-bottom: 1rem; }
+  .section-title { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: clamp(2rem,4vw,3rem); letter-spacing: -1.5px; color: var(--text); line-height: 1.1; margin-bottom: 1rem; }
+  .section-subtitle { color: var(--text-muted); font-size: 1.05rem; max-width: 540px; line-height: 1.7; }
+  .section-header { margin-bottom: clamp(1.8rem,3.5vw,2.8rem); }
+  .section-header.center { text-align: center; }
+  .section-header.center .section-subtitle { margin: 0 auto; }
+  .divider { width: 48px; height: 3px; background: var(--accent); border-radius: 2px; margin: 1rem 0; }
+  .center .divider { margin: 1rem auto; }
+
+  /* ── ABOUT ── */
+  #about { background: var(--bg2); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 5rem; align-items: center; }
+  .about-visual { position: relative; }
+  .about-card-stack { position: relative; height: 380px; }
+  .acard { position: absolute; border-radius: 20px; padding: 24px; background: var(--bg); border: 1.5px solid var(--border); box-shadow: var(--shadow); transition: transform 0.35s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.35s, border-color 0.35s, z-index 0s 0.12s; }
+  .acard-pop:hover { z-index: 10; border-color: var(--accent); box-shadow: var(--shadow-hover); transform: translateY(-18px) scale(1.04); transition-delay: 0s; }
+  .acard-main { left: 0; top: 0; width: 270px; }
+  .acard-secondary { right: 0; bottom: 40px; width: 200px; background: var(--accent); color: #fff; }
+  .acard-secondary * { color: #fff !important; }
+  .acard h4 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: var(--text); }
+  .acard p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+  .stats-row { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin-top: 2rem; }
+  .stat-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: 16px; padding: 20px; text-align: center; transition: var(--transition); }
+  .stat-card:hover { border-color: var(--accent); box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+  .stat-num { font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 2rem; color: var(--accent); letter-spacing: -1px; }
+  .stat-label { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; margin-top: 2px; }
+  .about-text p { color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem; }
+  .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1.5rem; }
+  .about-tag { display: flex; align-items: center; gap: 6px; background: var(--accent-soft); color: var(--accent); border-radius: 10px; padding: 6px 14px; font-size: 0.8rem; font-weight: 600; border: 1px solid rgba(124,58,237,0.2); }
+
+  /* ── SKILLS ── */
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .skill-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: 18px; padding: 24px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; transition: var(--transition); cursor: default; }
+  .skill-card:hover { border-color: var(--accent); box-shadow: var(--shadow-hover); transform: translateY(-6px); background: var(--accent-soft); }
+  .skill-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; transition: var(--transition); }
+  .skill-icon svg { width: 22px; height: 22px; stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: var(--transition); }
+  .skill-card:hover .skill-icon { background: var(--accent); }
+  .skill-card:hover .skill-icon svg { stroke: #fff; }
+  .skill-name { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--text); }
+  .skill-bar-bg { width: 100%; height: 4px; background: var(--border); border-radius: 4px; overflow: hidden; }
+  .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-light)); border-radius: 4px; width: 0; transition: width 1.2s cubic-bezier(0.4,0,0.2,1); }
+
+  /* ── PORTFOLIO ── */
+  #work { background: var(--bg2); }
+  .filter-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2.5rem; }
+  .filter-btn { padding: 8px 18px; border-radius: 100px; border: 1.5px solid var(--border); background: var(--bg); color: var(--text-muted); font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: inherit; }
+  .filter-btn.active, .filter-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+  .project-card { position: relative; border-radius: 28px; overflow: hidden; background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(246,242,255,0.95)); border: 1px solid rgba(124,58,237,0.12); box-shadow: 0 24px 60px rgba(124,58,237,0.08); transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; }
+  .project-card::before { content: '';
+    position: absolute;
+    top: -28px;
+    right: -28px;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .project-card::after { content: '';
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(167,139,250,0.16) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .project-card:hover { transform: translateY(-10px); box-shadow: 0 32px 80px rgba(124,58,237,0.18); border-color: rgba(124,58,237,0.25); }
+  .project-thumb { position: relative; height: 220px; overflow: hidden; }
+  .project-thumb-bg { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-start; padding: 28px; transition: transform 0.35s ease; background-size: cover; background-position: center; }
+  .project-thumb-bg::before { content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0));
+    pointer-events: none;
+  }
+  .project-card:hover .project-thumb-bg { transform: scale(1.04); }
+  .project-thumb-icon { width: 72px; height: 72px; min-width: 72px; border-radius: 22px; background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px rgba(124,58,237,0.08); }
+  .project-overlay { position: absolute; inset: 0; background: rgba(124,58,237,0.9); display: flex; align-items: center; justify-content: center; gap: 12px; opacity: 0; transition: opacity 0.35s ease; }
+  .project-card:hover .project-overlay { opacity: 1; }
+  .overlay-btn { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); color: #fff; border-radius: 999px; padding: 10px 18px; font-size: 0.8rem; font-weight: 700; cursor: pointer; backdrop-filter: blur(10px); text-decoration: none; transition: transform 0.3s ease, background 0.3s ease; font-family: inherit; }
+  .overlay-btn:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
+  .project-body { position: relative; padding: 26px 26px 28px; }
+  .project-cat { display: inline-flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); background: rgba(124,58,237,0.08); border-radius: 999px; padding: 8px 12px; margin-bottom: 10px; }
+  .project-title { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.18rem; color: var(--text); line-height: 1.3; margin-bottom: 12px; }
+  .project-desc { font-size: 0.92rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 16px; }
+  .project-tools { display: flex; flex-wrap: wrap; gap: 10px; }
+  .tool-tag { background: rgba(124,58,237,0.08); color: var(--accent); border-radius: 999px; padding: 8px 12px; font-size: 0.75rem; font-weight: 700; }
+
+  /* ── PROJECT CARDS DARK MODE ── */
+  [data-theme="dark"] .project-card { background: linear-gradient(180deg, var(--bg), var(--bg2)); border: 1px solid var(--border); }
+  [data-theme="dark"] .project-thumb-bg::before { background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.1)); }
+  [data-theme="dark"] .project-thumb-icon { background: rgba(0,0,0,0.4); }
+
+  /* ── EXPERIENCE ── */
+  .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+  .timeline::before { content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--accent), transparent); }
+  .tl-item { display: flex; gap: 2.5rem; margin-bottom: 2.5rem; position: relative; }
+  .tl-dot-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+  .tl-dot { width: 56px; height: 56px; border-radius: 50%; background: var(--accent-soft); border: 3px solid var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; z-index: 1; transition: var(--transition); }
+  .tl-item:hover .tl-dot { background: var(--accent); }
+  .tl-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: 18px; padding: 24px; flex: 1; transition: var(--transition); }
+  .tl-item:hover .tl-card { border-color: var(--accent); box-shadow: var(--shadow-hover); }
+  .tl-period { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 6px; }
+  .tl-role { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text); margin-bottom: 3px; }
+  .tl-company { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; margin-bottom: 12px; }
+  .tl-points { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .tl-points li { font-size: 0.85rem; color: var(--text-muted); padding-left: 16px; position: relative; line-height: 1.6; }
+  .tl-points li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); font-size: 0.7rem; top: 2px; }
+
+  /* ── SERVICES ── */
+  #services { background: var(--bg2); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .service-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: 22px; padding: 32px 28px; position: relative; overflow: hidden; transition: var(--transition); }
+  .service-card::before { content: ''; position: absolute; top: -60px; right: -60px; width: 160px; height: 160px; background: var(--accent-soft); border-radius: 50%; transition: var(--transition); }
+  .service-card:hover::before { transform: scale(3); }
+  .service-card:hover { border-color: var(--accent); box-shadow: var(--shadow-hover); transform: translateY(-6px); }
+  .service-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; position: relative; z-index: 1; transition: var(--transition); }
+  .service-icon svg { width: 24px; height: 24px; stroke: var(--accent); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; transition: var(--transition); }
+  .service-card:hover .service-icon { background: var(--accent); }
+  .service-card:hover .service-icon svg { stroke: #fff; }
+  .service-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text); margin-bottom: 10px; position: relative; z-index: 1; }
+  .service-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; position: relative; z-index: 1; }
+  .service-arrow { display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; color: var(--accent); font-size: 0.82rem; font-weight: 600; position: relative; z-index: 1; transition: var(--transition); text-decoration: none; cursor: pointer; }
+  .service-card:hover .service-arrow { gap: 10px; }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--bg2); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start; }
+  .contact-info { display: flex; flex-direction: column; gap: 20px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--bg); border: 1.5px solid var(--border); border-radius: 16px; transition: var(--transition); }
+  .contact-item:hover { border-color: var(--accent); box-shadow: var(--shadow); }
+  .contact-item-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+  .contact-item-text h4 { font-weight: 700; font-size: 0.85rem; color: var(--text); margin-bottom: 3px; }
+  .contact-item-text p, .contact-item-text a { font-size: 0.83rem; color: var(--text-muted); text-decoration: none; }
+  .contact-form { background: var(--bg); border: 1.5px solid var(--border); border-radius: 24px; padding: 36px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+  .form-group label { font-size: 0.8rem; font-weight: 600; color: var(--text); }
+  .form-group input, .form-group textarea, .form-group select { background: var(--bg2); border: 1.5px solid var(--border); border-radius: 12px; padding: 12px 16px; font-size: 0.88rem; color: var(--text); font-family: inherit; transition: var(--transition); outline: none; resize: none; }
+  .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .form-group textarea { min-height: 120px; }
+  .form-submit { width: 100%; padding: 15px; border-radius: 14px; background: var(--accent); color: #fff; border: none; font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: inherit; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .form-submit:hover { background: #6d28d9; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(124,58,237,0.35); }
+
+  /* ── FOOTER ── */
+  footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 3rem clamp(1.5rem,6vw,7rem); }
+  .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
+  .footer-logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.2rem; color: #fff; letter-spacing: -0.5px; }
+  .footer-logo span { color: var(--accent-light); }
+  .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent-light); }
+  .footer-socials { display: flex; gap: 10px; }
+  .footer-social { width: 36px; height: 36px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); font-size: 0.9rem; text-decoration: none; transition: var(--transition); }
+  .footer-social:hover { border-color: var(--accent-light); color: var(--accent-light); }
+  .footer-social svg { width: 16px; height: 16px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.4); width: 100%; text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 0.5rem; }
+
+  /* ── FLOATING SOCIALS ── */
+  .float-socials { position: fixed; right: 24px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 100; }
+  .float-social { width: 38px; height: 38px; border-radius: 10px; background: var(--bg); border: 1.5px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.9rem; text-decoration: none; transition: var(--transition); box-shadow: var(--shadow); }
+  .float-social:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); transform: scale(1.1) translateX(-3px); }
+  .float-social[href*="instagram"]:hover { border-color: #E4405F; color: #fff; background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+  .float-social[href*="mailto"]:hover { border-color: #D44638; color: #fff; background: linear-gradient(135deg, #d44638, #ea4335); }
+  .float-social[href*="mailto"] svg, .social-icon[href*="mailto"] svg { stroke: currentColor; }
+  .float-social[href*="instagram"] svg, .social-icon[href*="instagram"] svg { stroke: currentColor; }
+  .float-social[href*="tel"]:hover, .social-icon[href*="tel"]:hover { border-color: #25D366; color: #fff; background: linear-gradient(135deg, #25D366, #128C7E); }
+  .linkedin-card:hover { background: #0a66c2; border-color: #0a66c2; color: #fff; }
+
+  /* ── ANIMATIONS ── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal-left.visible { opacity: 1; transform: translateX(0); }
+  .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+  /* ── BACK TO TOP ── */
+  #back-top { position: fixed; bottom: 28px; right: 24px; width: 44px; height: 44px; border-radius: 12px; background: var(--accent); color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; box-shadow: 0 4px 20px var(--accent-glow); transition: var(--transition); opacity: 0; pointer-events: none; z-index: 500; }
+  #back-top.show { opacity: 1; pointer-events: all; }
+  #back-top:hover { background: #6d28d9; transform: translateY(-3px); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    #home { grid-template-columns: 1fr; text-align: center; padding-top: 120px; gap: 3rem; }
+    #home .hero-image { order: -1; }
+    .hero-content { max-width: 680px; margin: 0 auto; align-items: center; }
+    .hero-btns, .hero-socials, .hero-roles { justify-content: center; }
+    .hero-desc { max-width: 100%; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-card-stack { height: 300px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .float-socials { display: none; }
+    .photo-frame { width: 290px; height: 340px; }
+  }
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; align-items: flex-start; }
+    .skills-grid { grid-template-columns: repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-name">Tamil <span>Selvan</span></div>
+  <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+</div>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress"></div>
+
+<!-- Back to Top -->
+<button id="back-top" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></button>
+
+<!-- Float Socials -->
+<div class="float-socials">
+  <a href="https://www.linkedin.com/in/tamil-selvan-108430291" target="_blank" rel="noopener noreferrer" class="float-social linkedin-card" title="LinkedIn" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8a2.5 2.5 0 0 1-.02-4.5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.1 0 4.9 2.7 4.9 6.2V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+  <a href="https://www.instagram.com/itz._tamil.22/" target="_blank" rel="noopener noreferrer" class="float-social" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+  <a href="mailto:itztamil22@gmail.com" class="float-social" title="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+</div>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">Tamil<span>.</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>           
+    <li><a href="#work">Work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8z"/></svg></button>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+  <a href="#work">Work</a><a href="#experience">Experience</a><a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ── HERO ── -->  
+<section id="home">                                
+  <div class="hero-bg">
+    <!-- Grid pattern design -->
+    <svg class="hero-design design-meta" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d0cdd8" stroke-width="0.8"/>
+        </pattern>
+      </defs>
+      <rect width="280" height="280" fill="url(#grid)"/>
+      <circle cx="140" cy="140" r="60" fill="none" stroke="#d0cdd8" stroke-width="1" opacity="0.6"/>
+      <circle cx="140" cy="140" r="40" fill="none" stroke="#d0cdd8" stroke-width="1" opacity="0.4"/>
+      <circle cx="140" cy="140" r="20" fill="none" stroke="#d0cdd8" stroke-width="1" opacity="0.3"/>
+    </svg>
+
+    <!-- Google-inspired colorful elements -->
+    <svg class="hero-design design-google" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="30" width="60" height="130" fill="none" stroke="#d0cdd8" stroke-width="1.5" rx="4"/>
+      <rect x="100" y="50" width="60" height="110" fill="none" stroke="#d0cdd8" stroke-width="1.5" rx="4"/>
+      <rect x="180" y="40" width="60" height="120" fill="none" stroke="#d0cdd8" stroke-width="1.5" rx="4"/>
+      <rect x="260" y="60" width="50" height="100" fill="none" stroke="#d0cdd8" stroke-width="1.5" rx="4"/>
+      <line x1="10" y1="170" x2="310" y2="170" stroke="#d0cdd8" stroke-width="1"/>
+      <circle cx="50" cy="35" r="3" fill="#d0cdd8"/>
+      <circle cx="130" cy="52" r="3" fill="#d0cdd8"/>
+      <circle cx="210" cy="42" r="3" fill="#d0cdd8"/>
+      <circle cx="285" cy="62" r="3" fill="#d0cdd8"/>
+    </svg>
+
+    <!-- Campaign analytics chart -->
+    <svg class="hero-design design-chart" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#d0cdd8" stroke-width="1.2">
+        <polyline points="20,180 50,130 80,150 110,80 140,100 170,40 200,60" stroke-width="1.5"/>
+        <circle cx="20" cy="180" r="3" fill="#d0cdd8"/>
+        <circle cx="50" cy="130" r="3" fill="#d0cdd8"/>
+        <circle cx="80" cy="150" r="3" fill="#d0cdd8"/>
+        <circle cx="110" cy="80" r="3" fill="#d0cdd8"/>
+        <circle cx="140" cy="100" r="3" fill="#d0cdd8"/>
+        <circle cx="170" cy="40" r="3" fill="#d0cdd8"/>
+        <circle cx="200" cy="60" r="3" fill="#d0cdd8"/>
+        <line x1="10" y1="210" x2="220" y2="210" stroke-width="1"/>
+        <line x1="10" y1="20" x2="10" y2="210" stroke-width="1"/>
+        <line x1="10" y1="90" x2="220" y2="90" stroke-width="0.8" stroke-dasharray="3,3"/>
+        <line x1="10" y1="150" x2="220" y2="150" stroke-width="0.8" stroke-dasharray="3,3"/>
+      </g>
+    </svg>
+
+    <!-- Performance metrics design -->
+    <svg class="hero-design design-graph" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#c4c0d0" stroke-width="1.5">
+        <rect x="15" y="40" width="25" height="90" rx="2"/>
+        <rect x="50" y="20" width="25" height="110" rx="2"/>
+        <rect x="85" y="50" width="25" height="80" rx="2"/>
+        <rect x="120" y="30" width="25" height="100" rx="2"/>
+        <rect x="155" y="60" width="25" height="70" rx="2"/>
+      </g>
+      <circle cx="100" cy="30" r="4" fill="none" stroke="#d0cdd8" stroke-width="1"/>
+      <polyline points="15,40 40,30 75,50 100,30 130,60 160,50" fill="none" stroke="#d0cdd8" stroke-width="1"/>
+    </svg>
+
+    <div class="hero-orb orb1"></div>
+    <div class="hero-orb orb2"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/></svg> Available for Opportunities</div>
+    <h1 class="hero-title">Hi, I'm <span class="name-accent">Tamil Selvan I</span><br>Digital Marketer </h1>
+    <div class="hero-roles">
+      <span class="role-tag">Digital Marketing Executive</span>
+      <span class="role-tag">Creative Strategist</span>
+      <span class="role-tag">AI Marketing Specialist</span>
+    </div>
+    <p class="hero-desc">I help brands grow online through data-driven SEO, high-converting Meta Ads, and strategic content marketing. Passionate about blending creativity with analytics to deliver measurable results.</p>
+    <div class="hero-btns">
+      <a href="#work" class="btn btn-primary">View My Work <svg viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a>
+      <a href="Tamil Selvan I Resume.pdf" class="btn btn-outline" download>Download Resume</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin-card" title="LinkedIn" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8a2.5 2.5 0 0 1-.02-4.5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.1 0 4.9 2.7 4.9 6.2V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="mailto:itztamil22@gmail.com" class="social-icon" title="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      <a href="tel:+918807905219" class="social-icon" title="Phone"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="photo-frame">
+      <div class="photo-bg"></div>
+      <div class="photo-inner">
+        <img src="tamilselvan profile.jpg" alt="Profile of Tamil Selvan" class="photo-img" />
+      </div>
+      <div class="photo-float-badge badge-exp">
+        <div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M12 15l-3-3 1.5-1.5L12 12l4.5-4.5L18 9l-6 6z"/><circle cx="12" cy="8" r="3"/><path d="M3 17c0-2.2 3.6-4 9-4s9 1.8 9 4"/></svg></div>
+        <div><div style="font-size:1.1rem;font-weight:900;color:var(--accent);font-family:'Outfit',sans-serif">6+</div><div style="font-size:0.7rem;color:var(--text-muted)">Months Exp.</div></div>
+      </div>
+      <div class="photo-float-badge badge-proj">
+        <div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div><div style="font-size:1.1rem;font-weight:900;color:var(--accent);font-family:'Outfit',sans-serif">10+</div><div style="font-size:0.7rem;color:var(--text-muted)">Projects Done</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal-left">
+      <div class="about-card-stack">
+        <div class="acard acard-main acard-pop">
+          <div class="acard-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <h4>Data-Driven Approach</h4>
+          <p>Every campaign backed by real analytics, measurable KPIs, and continuous optimization for peak ROI.</p>
+        </div>
+        <div class="acard acard-pop" style="left:30px;top:120px;width:240px;">
+          <div class="acard-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h4>Targeted Campaigns</h4>
+          <p>Precision audience targeting on Meta & Google for maximum lead generation impact.</p>
+        </div>
+        <div class="acard acard-secondary">
+          <div class="acard-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h4>Fast Results</h4>
+          <p>Rapid strategy execution with agile optimizations to hit goals quickly.</p>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card"><div class="stat-num" data-target="10">0</div><div class="stat-label">Projects Completed</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="5">0</div><div class="stat-label">Clients Worked With</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="50">0</div><div class="stat-label">K+ Campaign Reach</div></div>
+        <div class="stat-card"><div class="stat-num" data-target="6">0</div><div class="stat-label">Months Experience</div></div>
+      </div>
+    </div>
+    <div class="about-text reveal-right">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Crafting Digital Stories That Convert</h2>
+      <div class="divider"></div>
+      <p>I'm Tamil Selvan I — a passionate Digital Marketing Executive based in Erode, Tamil Nadu. Currently completing my BCA at Shree Venkateshwara Arts and Science College, I've been building real-world marketing expertise across SEO, paid media, and content strategy.</p>
+      <p>My journey spans internships at Virtouspark (Bangalore) and KA Strategist (Coimbatore), plus a hands-on project with Kalvippaathai, where I managed Meta Ads campaigns, created content strategies, and generated qualified leads.</p>
+      <p>Currently, I’m working at Minerva Industries, where I handle end-to-end digital marketing activities such as SEO, SMM, content creation, social media page handling, AI video generation, Meta Ads, and WhatsApp automation.</p>
+      <p>I'm deeply passionate about the intersection of AI creativity, data-driven performance marketing, and brand storytelling — always looking for ways to make campaigns smarter and results stronger.</p>
+      <div class="about-tags">
+        <span class="about-tag"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> SEO Strategy</span>
+        <span class="about-tag"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> AI Marketing</span>
+        <span class="about-tag"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg> Social Media</span>
+        <span class="about-tag"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg> Branding</span>
+        <span class="about-tag"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> Performance</span>
+        <span class="about-tag"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg> Content</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-header center">
+    <div class="section-label">My Skillset</div>
+    <h2 class="section-title">Tools & Technologies</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">A comprehensive toolkit built through hands-on projects, internships, and continuous learning.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="skill-name">Meta Ads</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M5 19h14v-2H5v2Zm0-5h14v-2H5v2Zm0-5h14V7H5v2Z"/></svg></div><div class="skill-name">Google Ads</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="84"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M5 7h14"/><path d="M5 17h14"/><path d="M7 7v10"/><path d="M17 7v10"/><path d="M12 4v16"/></svg></div><div class="skill-name">Google Flow</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="76"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><div class="skill-name">Search Engine Optimization</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M22 4s-2.5 2.5-5 5c-1.5-3-4-5-7-5C5 4 2 7 2 10.5S5 17 10 17c1.5 0 3-.4 4.2-1.1L17 19l3 3 2-2-3-3-2.9-2.8C17.6 13 18 11.5 18 10"/></svg></div><div class="skill-name">Social Media Marketing</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><div class="skill-name">Performance Marketing</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div class="skill-name">Content Strategy</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="87"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="skill-name">Branding</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><div class="skill-name">Canva Design</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="skill-name">AI Tools</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="skill-name">Google Analytics</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg></div><div class="skill-name">Keyword Research</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="86"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div><div class="skill-name">Google Search Console</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="79"></div></div></div>
+    <div class="skill-card reveal"><div class="skill-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="skill-name">Lead Generation</div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="84"></div></div></div>
+  </div>
+</section>
+
+<!-- ── WORK / PORTFOLIO ── -->
+<section id="work">
+  <div class="section-header">
+    <div class="section-label">Portfolio</div>
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">Real campaigns, real results. A selection of work across digital marketing disciplines.</p>
+  </div>
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="meta">Meta Ads</button>
+    <button class="filter-btn" data-filter="seo">SEO</button>
+    <button class="filter-btn" data-filter="branding">Branding</button>
+    <button class="filter-btn" data-filter="content">Content</button>
+    <button class="filter-btn" data-filter="social">Social Campaigns</button>
+  </div>
+  <div class="portfolio-grid" id="portfolioGrid">
+    <div class="project-card reveal" data-cat="meta">
+      <div class="project-thumb"><div class="project-thumb-bg" style="background:linear-gradient(135deg,#ede9fe,#ddd6fe)"><div class="project-thumb-icon"><svg viewBox="0 0 24 24" width="30" height="30" stroke="#7C3AED" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div></div>
+        <div class="project-overlay"><a href="#" class="overlay-btn">Live Preview</a><a href="#" class="overlay-btn">Case Study</a></div>
+      </div>
+      <div class="project-body"><div class="project-cat">Meta Ads</div><div class="project-title">Kalvippaathai Lead Gen Campaign</div><div class="project-desc">Managed Meta Ads campaigns for an education brand, achieving significant audience reach and optimized lead generation through targeted ad strategies.</div>
+        <div class="project-tools"><span class="tool-tag">Meta Ads</span><span class="tool-tag">Lead Gen</span><span class="tool-tag">Audience Targeting</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="seo">
+      <div class="project-thumb"><div class="project-thumb-bg" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7)"><div class="project-thumb-icon"><svg viewBox="0 0 24 24" width="30" height="30" stroke="#16a34a" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
+        <div class="project-overlay"><a href="#" class="overlay-btn">Live Preview</a><a href="#" class="overlay-btn">Case Study</a></div>
+      </div>
+      <div class="project-body"><div class="project-cat">SEO</div><div class="project-title">On-Page SEO Optimization</div><div class="project-desc">Conducted comprehensive keyword research and on-page optimization for client websites, improving content reach and organic search visibility.</div>
+        <div class="project-tools"><span class="tool-tag">SEO Audit</span><span class="tool-tag">Keyword Research</span><span class="tool-tag">Search Console</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="content">
+      <div class="project-thumb"><div class="project-thumb-bg" style="background:linear-gradient(135deg,#fef9c3,#fde68a)"><div class="project-thumb-icon"><svg viewBox="0 0 24 24" width="30" height="30" stroke="#ca8a04" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div></div>
+        <div class="project-overlay"><a href="#" class="overlay-btn">Live Preview</a><a href="#" class="overlay-btn">Case Study</a></div>
+      </div>
+      <div class="project-body"><div class="project-cat">Content</div><div class="project-title">Content Strategy & Creation</div><div class="project-desc">Developed engaging content strategies for social platforms, created posts, scripts, and campaign copy that improved audience engagement and brand reach.</div>
+        <div class="project-tools"><span class="tool-tag">Content Writing</span><span class="tool-tag">Canva</span><span class="tool-tag">Strategy</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="social">
+      <div class="project-thumb"><div class="project-thumb-bg" style="background:linear-gradient(135deg,#fce7f3,#fbcfe8)"><div class="project-thumb-icon"><svg viewBox="0 0 24 24" width="30" height="30" stroke="#db2777" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
+        <div class="project-overlay"><a href="#" class="overlay-btn">Live Preview</a><a href="#" class="overlay-btn">Case Study</a></div>
+      </div>
+      <div class="project-body"><div class="project-cat">Social Campaigns</div><div class="project-title">Social Media Growth Campaign</div><div class="project-desc">Planned and executed social media campaigns across platforms, supporting audience growth, engagement improvement, and brand awareness for clients.</div>
+        <div class="project-tools"><span class="tool-tag">Instagram</span><span class="tool-tag">Facebook</span><span class="tool-tag">Analytics</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="branding">
+      <div class="project-thumb"><div class="project-thumb-bg" style="background:linear-gradient(135deg,#ede9fe,#c4b5fd)"><div class="project-thumb-icon"><svg viewBox="0 0 24 24" width="30" height="30" stroke="#7C3AED" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div></div>
+        <div class="project-overlay"><a href="#" class="overlay-btn">Live Preview</a><a href="#" class="overlay-btn">Case Study</a></div>
+      </div>
+      <div class="project-body"><div class="project-cat">Branding</div><div class="project-title">Brand Identity & Design</div><div class="project-desc">Assisted in building brand visual identities using Canva — crafting cohesive social templates, brand colours, and digital assets for client businesses.</div>
+        <div class="project-tools"><span class="tool-tag">Canva</span><span class="tool-tag">Brand Design</span><span class="tool-tag">Visual Identity</span></div>
+      </div>
+    </div>
+    <div class="project-card reveal" data-cat="meta">
+      <div class="project-thumb"><div class="project-thumb-bg" style="background:linear-gradient(135deg,#e0f2fe,#bae6fd)"><div class="project-thumb-icon"><svg viewBox="0 0 24 24" width="30" height="30" stroke="#0284c7" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div></div>
+        <div class="project-overlay"><a href="#" class="overlay-btn">Live Preview</a><a href="#" class="overlay-btn">Case Study</a></div>
+      </div>
+      <div class="project-body"><div class="project-cat">Performance Marketing</div><div class="project-title">Campaign Analytics & Reporting</div><div class="project-desc">Tracked and analysed campaign performance using Google Analytics and Meta Ads Manager, providing actionable optimization insights to improve ROAS.</div>
+        <div class="project-tools"><span class="tool-tag">Google Analytics</span><span class="tool-tag">Meta Ads Manager</span><span class="tool-tag">Reporting</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="section-header center">
+    <div class="section-label">Career Journey</div>
+    <h2 class="section-title">Experience & Education</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">A timeline of growth, learning, and real-world marketing experience.</p>
+  </div>
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-dot-wrap"><div class="tl-dot"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div></div>
+      <div class="tl-card">
+        <div class="tl-period">2022 — 2025</div>
+        <div class="tl-role">Bachelor of Computer Applications (BCA)</div>
+        <div class="tl-company">Shree Venkateshwara Arts and Science College, Erode</div>
+        <ul class="tl-points">
+          <li>Focused on academic learning in computer applications, programming, web fundamentals, and software-related subjects</li>
+          <li>Completed the academic final year project as part of undergraduate studies</li>
+          <li>Built a strong academic foundation in computers and digital communication during my under graduation</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot-wrap"><div class="tl-dot"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div></div>
+      <div class="tl-card">
+        <div class="tl-period">Dec 2025 — Apr 2026</div>
+        <div class="tl-role">Digital Marketing Course Completion</div>
+        <div class="tl-company">KGISL — Completed through the Vetri Nitchayam Scheme, Tamil Nadu Government</div>
+        <ul class="tl-points">
+          <li>Completed a Digital Marketing course through the Vetri Nitchayam Scheme, Tamil Nadu Government, at KGISL</li>
+          <li>Strengthened knowledge in digital marketing fundamentals, online promotion, and content-based marketing approaches</li>
+          <li>Gained practical understanding of how digital marketing supports brand visibility, engagement, and audience growth</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot-wrap"><div class="tl-dot"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 12h20"/></svg></div></div>
+      <div class="tl-card">
+        <div class="tl-period">Currently Working</div>
+        <div class="tl-role">Digital Marketing Executive</div>
+        <div class="tl-company">Minerva Industries — Current Role</div>
+        <ul class="tl-points">
+          <li>Worked on SEO activities including keyword research, on-page optimization, and content improvements to support organic visibility</li>
+          <li>Handled social media marketing tasks such as content planning, post coordination, audience engagement, and brand communication</li>
+          <li>Supported Google Ads campaigns with campaign setup, keyword planning, ad copy coordination, and performance monitoring</li>
+          <li>Tracked campaign results and used data-driven insights to improve reach, traffic, leads, and overall digital performance</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot-wrap"><div class="tl-dot"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div></div>
+      <div class="tl-card">
+        <div class="tl-period">Freelance / Project</div>
+        <div class="tl-role">Social Media Marketing & Content Creator</div>
+        <div class="tl-company">Kalvippaathai — Erode, Tamil Nadu</div>
+        <ul class="tl-points">
+          <li>Managed Meta Ads campaigns end-to-end for lead generation objectives</li>
+          <li>Worked as Content Creator & Content Writer for the brand's digital platforms</li>
+          <li>Created audience-targeted content strategies to boost organic reach</li>
+          <li>Generated and continuously optimized leads through targeted campaigns</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot-wrap"><div class="tl-dot"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div></div>
+      <div class="tl-card">
+        <div class="tl-period">3 Months Internship</div>
+        <div class="tl-role">Digital Marketing Executive</div>
+        <div class="tl-company">Virtouspark — Bangalore, Karnataka</div>
+        <ul class="tl-points">
+          <li>Assisted in SEO activities including keyword research and on-page optimization</li>
+          <li>Supported social media content planning and execution across platforms</li>
+          <li>Gained practical exposure to professional digital marketing tools and strategies</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-dot-wrap"><div class="tl-dot"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
+      <div class="tl-card">
+        <div class="tl-period">3 Months Internship</div>
+        <div class="tl-role">Digital Marketing Executive</div>
+        <div class="tl-company">KA Strategist — Coimbatore, Tamil Nadu</div>
+        <ul class="tl-points">
+          <li>Gained hands-on experience in SEO strategy and social media management</li>
+          <li>Performed keyword research to improve content reach and discoverability</li>
+          <li>Assisted in content creation and posting across multiple digital platforms</li>
+          <li>Supported campaign strategies and contributed to improving online visibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="section-header center">
+    <div class="section-label">What I Offer</div>
+    <h2 class="section-title">Services</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">End-to-end digital marketing solutions tailored to grow your brand online.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5z"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      <div class="service-title">Social Media Marketing</div>
+      <div class="service-desc">Strategic content planning, creative post design, and consistent brand presence across Instagram, Facebook, and LinkedIn to grow your audience organically.</div>
+      <a href="#contact" class="service-arrow">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="service-title">Meta Ads Management</div>
+      <div class="service-desc">End-to-end Facebook & Instagram ad campaign management — from creative strategy and audience targeting to A/B testing and performance optimization for maximum ROI.</div>
+      <a href="#contact" class="service-arrow">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h.01M7 12h10M7 12h10"/></svg></div>
+      <div class="service-title">AI Creative Strategy</div>
+      <div class="service-desc">Leveraging AI tools to supercharge content ideation, copywriting, visual creation, and campaign personalization for faster and smarter marketing outcomes.</div>
+      <a href="#contact" class="service-arrow">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <div class="service-title">Brand Growth & Identity</div>
+      <div class="service-desc">Building cohesive brand identities with strong messaging, visual assets, and positioning strategy to differentiate your business and connect with your target audience.</div>
+      <a href="#contact" class="service-arrow">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+      <div class="service-title">Performance Marketing</div>
+      <div class="service-desc">Data-driven campaigns across paid channels focused on measurable KPIs — clicks, leads, conversions, and ROAS — with ongoing analytics-backed optimizations.</div>
+      <a href="#contact" class="service-arrow">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+      <div class="service-title">Content Marketing & SEO</div>
+      <div class="service-desc">Keyword-researched, audience-focused content strategy and creation paired with on-page and technical SEO to drive organic traffic and improve search rankings.</div>
+      <a href="#contact" class="service-arrow">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-header">
+    <div class="section-label">Get In Touch</div>
+    <h2 class="section-title">Let's Work Together</h2>
+    <div class="divider"></div>
+    <p class="section-subtitle">Have a project in mind or want to discuss an opportunity? I'd love to hear from you.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info reveal-left">
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <div class="contact-item-text"><h4>Email Address</h4><a href="mailto:itztamil22@gmail.com">itztamil22@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <div class="contact-item-text"><h4>Phone Number</h4><a href="tel:+918807905219">+91 88079 05219</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="contact-item-text"><h4>Location</h4><p>Erode, Tamil Nadu, India</p></div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 12h20"/></svg></div>
+        <div class="contact-item-text"><h4>Availability</h4><p>Open for full-time & freelance roles</p></div>
+      </div>
+      <div style="display:flex;gap:10px;padding-top:4px;">
+        <a href="https://share.google/GrJxaUOT68hru669z" target="_blank" rel="noopener noreferrer" class="social-icon linkedin-card" title="LinkedIn" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8a2.5 2.5 0 0 1-.02-4.5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.1 0 4.9 2.7 4.9 6.2V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+        <a href="https://instagram.com" target="_blank" class="social-icon" style="border-color:var(--border)"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="mailto:itztamil22@gmail.com" class="social-icon" style="border-color:var(--border)"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <div class="contact-form reveal-right">
+      <div class="form-row">
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Tamil Selvan" /></div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="hello@example.com" /></div>
+      </div>
+      <div class="form-group"><label>Subject</label><input type="text" placeholder="Project Inquiry / Job Opportunity" /></div>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell me about your project or opportunity..."></textarea></div>
+      <button class="form-submit" id="formSubmit">Send Message <svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Tamil<span>.</span></div>
+    <div class="footer-links">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+    <div class="footer-socials">
+      <a href="https://share.google/GrJxaUOT68hru669z" target="_blank" rel="noopener noreferrer" class="footer-social linkedin-card" title="LinkedIn" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8a2.5 2.5 0 0 1-.02-4.5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.9-2 3.9-2 4.1 0 4.9 2.7 4.9 6.2V21h-4v-5.4c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" class="footer-social"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="mailto:itztamil22@gmail.com" class="footer-social"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 Tamil Selvan I. Crafted with passion in Tamil Nadu, India</div>
+</footer>
+
+<script>
+// ── Loader
+window.addEventListener('load', () => {
+  setTimeout(() => document.getElementById('loader').classList.add('hide'), 2000);
+});
+
+// ── Cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+const useCustomCursor = window.matchMedia('(pointer: fine)').matches;
+if (cursor && ring && useCustomCursor) {
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  let cursorStarted = false;
+  document.addEventListener('pointermove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    if (!cursorStarted) {
+      rx = mx;
+      ry = my;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      cursorStarted = true;
+    }
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+    document.body.classList.add('cursor-ready');
+  });
+  document.addEventListener('pointerleave', () => document.body.classList.remove('cursor-ready'));
+  document.addEventListener('pointerenter', () => {
+    if (cursorStarted) document.body.classList.add('cursor-ready');
+  });
+  function animRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animRing);
+  }
+  animRing();
+  document.querySelectorAll('a,button,.skill-card,.service-card,.project-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; ring.style.width = '56px'; ring.style.height = '56px'; });
+    el.addEventListener('mouseleave', () => { cursor.style.width = '14px'; cursor.style.height = '14px'; ring.style.width = '40px'; ring.style.height = '40px'; });
+  });
+}
+
+// ── Scroll Progress
+const prog = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  prog.style.width = pct + '%';
+});
+
+// ── Navbar scroll
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+  document.getElementById('back-top').classList.toggle('show', window.scrollY > 400);
+});
+
+// ── Active nav link
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id'); });
+  navAnchors.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+});
+
+// ── Theme toggle
+const themeBtn = document.getElementById('themeToggle');
+const iconMoon = '<svg viewBox="0 0 24 24"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.5 6.5 0 0 0 9.8 9.8z"/></svg>';
+const iconSun = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+const iconSend = '<svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>';
+const iconCheck = '<svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>';
+let dark = false;
+themeBtn.addEventListener('click', () => {
+  dark = !dark;
+  document.documentElement.setAttribute('data-theme', dark ? 'dark' : '');
+  themeBtn.innerHTML = dark ? iconSun : iconMoon;
+});
+
+// ── Hamburger
+const ham = document.getElementById('hamburger');
+const navMob = document.getElementById('navMobile');
+ham.addEventListener('click', () => navMob.classList.toggle('open'));
+navMob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMob.classList.remove('open')));
+
+// ── Back to top
+document.getElementById('back-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ── Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+// ── Skill bars
+const skillObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        bar.style.width = bar.dataset.width + '%';
+      });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.skill-card').forEach(c => skillObs.observe(c));
+
+// ── Animated counters
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('[data-target]').forEach(el => {
+        const target = +el.dataset.target;
+        let count = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const interval = setInterval(() => {
+          count = Math.min(count + step, target);
+          el.textContent = count;
+          if (count >= target) clearInterval(interval);
+        }, 30);
+      });
+      counterObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.stats-row').forEach(r => counterObs.observe(r));
+
+// ── Portfolio filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const show = filter === 'all' || card.dataset.cat === filter;
+      card.style.display = show ? 'block' : 'none';
+    });
+  });
+});
+
+// ── Contact form
+document.getElementById('formSubmit').addEventListener('click', function() {
+  this.innerHTML = 'Message Sent! ' + iconCheck;
+  this.style.background = '#10b981';
+  setTimeout(() => { this.innerHTML = 'Send Message ' + iconSend; this.style.background = ''; }, 3000);
+});
+
+// ── Slow smooth scroll for navigation
+let activeScrollAnimation;
+
+function smoothScrollToElement(target, offset = 80) {
+  const targetElement = document.querySelector(target);
+  if (!targetElement) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    targetElement.scrollIntoView({ block: 'start' });
+    return;
+  }
+
+  if (activeScrollAnimation) cancelAnimationFrame(activeScrollAnimation);
+
+  const startPosition = window.scrollY;
+  const targetPosition = Math.max(0, targetElement.getBoundingClientRect().top + startPosition - offset);
+  const distance = targetPosition - startPosition;
+  const duration = Math.min(2200, Math.max(1400, Math.abs(distance) * 0.9));
+  let startTime;
+
+  const easeInOutCubic = progress => progress < 0.5
+    ? 4 * progress * progress * progress
+    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+  const animation = currentTime => {
+    startTime ??= currentTime;
+    const progress = Math.min((currentTime - startTime) / duration, 1);
+    window.scrollTo(0, startPosition + distance * easeInOutCubic(progress));
+
+    if (progress < 1) activeScrollAnimation = requestAnimationFrame(animation);
+    else activeScrollAnimation = undefined;
+  };
+
+  activeScrollAnimation = requestAnimationFrame(animation);
+}
+
+// Service cards can jump to the contact form and show the full form area
+document.querySelectorAll('.service-arrow').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    smoothScrollToElement('#contact', 40);
+    setTimeout(() => {
+      const form = document.querySelector('#contact .contact-form');
+      if (form) {
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      const messageField = document.querySelector('#contact textarea');
+      if (messageField) {
+        messageField.focus();
+      }
+    }, 650);
+  });
+});
+
+// Apply slow scroll to all navigation links
+const allNavLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
+allNavLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      smoothScrollToElement(href);
+    }
+  });
+});
+
+['wheel', 'touchstart', 'keydown'].forEach(eventName => {
+  window.addEventListener(eventName, () => {
+    if (activeScrollAnimation) cancelAnimationFrame(activeScrollAnimation);
+    activeScrollAnimation = undefined;
+  }, { passive: true });
+});
+</script>
+</body>
+</html>

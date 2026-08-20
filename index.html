@@ -90,8 +90,8 @@
   nav.scrolled { box-shadow: var(--shadow); }
   .nav-logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.3rem; letter-spacing: -0.5px; color: var(--text); text-decoration: none; }
   .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; align-items: center; gap: 0.15rem; list-style: none; }
-  .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--text-muted); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 8px; transition: var(--transition); letter-spacing: 0.2px; }
+  .nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
+  .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--text-muted); text-decoration: none; padding: 0.45rem 0.85rem; border-radius: 8px; transition: var(--transition); letter-spacing: 0.2px; }
   .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--accent-soft); }
   .nav-right { display: flex; align-items: center; gap: 12px; }
   .theme-btn { width: 38px; height: 38px; border-radius: 10px; border: 1.5px solid var(--border); background: var(--bg); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: var(--transition); color: var(--text); }
@@ -327,6 +327,7 @@
 
   /* ── FOOTER ── */
   footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 3rem clamp(1.5rem,6vw,7rem); }
+  [data-theme="dark"] footer { background: #050507; }
   .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; }
   .footer-logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.2rem; color: #fff; letter-spacing: -0.5px; }
   .footer-logo span { color: var(--accent-light); }
